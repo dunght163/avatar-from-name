@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Avatar from name</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h3>Avatar Generation from your name</h3>
+    <canvas id="user-icon" width="256" height="256"></canvas><br>
+    <canvas id="user-icon-2" width="256" height="256"></canvas><br>
+    <label for="inputName"></label>
+    <input id="inputName" type="text" name="name" value="">
+    <button name='btn' onClick="generate()">Generate</button>
+    <script>
+        function generate () {
+            lngApp.generateAvatarFromName();
+
+            var name = $("#inputName").val();
+            var canvas = document.getElementById("user-icon-2");
+            lngApp.generateAvatarFromName(name, canvas);
+        }
+    </script>
+</body>
+</html>
